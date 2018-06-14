@@ -12,7 +12,7 @@ int main() {
     t1.add("B"),
     t1.add("c");
     t1.add("h");
-    t1.printPostOrder();
+    t1.printInOrder();
     cout << "Höhe: " << t1.hoehe() << endl;
     cout << "Blätter: " << t1.blaetter() << endl;
     cout << "Knoten: " << t1.knoten() << endl;

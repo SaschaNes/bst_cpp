@@ -1,0 +1,3 @@
+/mnt/c/Users/neste/Desktop/2/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/neste/Desktop/2/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/neste/Desktop/2/build/CMakeFiles/xyz.dir

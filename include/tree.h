@@ -18,32 +18,40 @@ class BST {
   private:
     Node *root{};
 
-    void clear(Node*& root){
+    void _clear(Node*& root){
       if(root != NULL) {
-        clear(root -> left);
-        clear(root -> right);
+        _clear(root -> left);
+        _clear(root -> right);
         delete root;
         root = NULL;
       }
     }
 
-    void printPostOrder(Node* root){
+    void _printPostOrder(Node* root){
       if(root != NULL){
-        printPostOrder(root -> left);
-        printPostOrder(root -> right);
+        _printPostOrder(root -> left);
+        _printPostOrder(root -> right);
         cout << root -> key << endl;
       }
     }
 
-    Node* suche(std::string d, Node *root) {
+    void _printInOrder(Node* root){
+      if(root != NULL){
+        _printPostOrder(root -> left);
+        cout << root -> key << endl;
+        _printPostOrder(root -> right);
+      }
+    }
+
+    Node* _suche(std::string d, Node *root) {
       if(root != NULL) {
         if(d == root -> key){
           return root;
         }
         if(d < root -> key){
-          return suche(d, root -> left);
+          return _suche(d, root -> left);
         }else{
-          return suche(d, root -> right);
+          return _suche(d, root -> right);
         }
       }
     }
@@ -88,15 +96,19 @@ class BST {
       }
 
       void clear(){
-        clear(root);
+        _clear(root);
       }
 
       void search(string d){
-        suche(d, root);
+        _suche(d, root);
       }
 
       void printPostOrder(){
-        printPostOrder(root);
+        _printPostOrder(root);
+      }
+
+      void printInOrder(){
+        _printInOrder(root);
       }
 
       int knoten() {

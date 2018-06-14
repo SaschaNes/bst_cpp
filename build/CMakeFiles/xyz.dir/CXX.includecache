@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/tree.h
+iostream
+-
+math.h
+-
+
+/mnt/c/Users/neste/Desktop/2/src/main.cpp
+iostream
+-
+string
+-
+algorithm
+-
+tree.h
+/mnt/c/Users/neste/Desktop/2/src/tree.h
+
